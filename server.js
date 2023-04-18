@@ -18,9 +18,13 @@ app.get('/customers', async (req, res) => {
 });
 
 app.get('/transactions', async (req, res) => {
+  // sort the result by latest transaction first
+
   const result = await Trasactions.find({})
     .populate('sender')
-    .populate('receiver');
+    .populate('receiver')
+    .sort({ createdAt: -1 });
+
   res.json(result);
 });
 
