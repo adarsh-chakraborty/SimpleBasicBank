@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 const Customer = require('./models/Customer');
 const Trasactions = require('./models/Transactions');
@@ -77,9 +80,11 @@ app.post('/transfer', async (req, res) => {
 mongoose
   .connect(process.env.MONGODB)
   .then(() => {
-    app.listen(3000, async () => {
+    app.listen(PORT, async () => {
       // await seedDatabase();
-      console.log('Server is running');
+      console.log(
+        `Server started in ${process.env.NODE_ENV} mode on port ${PORT}`
+      );
     });
   })
   .catch((err) => console.log(err));
