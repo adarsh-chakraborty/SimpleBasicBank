@@ -1,0 +1,10 @@
+.head img {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

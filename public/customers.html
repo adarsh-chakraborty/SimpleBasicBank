@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ABC Bank</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="customers.html"
+                >View Customers</a
+              >
+              <span class="visually-hidden">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transactions.html"
+                >Transactions Histroy</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="modal" id="myModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Send Money</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span>Select Sender and Receiptant to transfer money.</span>
+              <div class="form-group">
+                <label for="exampleSelect1" class="form-label mt-4"
+                  >Sender</label
+                >
+                <select class="form-select" id="selectSender"></select>
+              </div>
+              <div class="form-group">
+                <label for="exampleSelect1" class="form-label mt-4"
+                  >Receiptant</label
+                >
+                <select class="form-select" id="selectReceiptant"></select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label mt-4">Amount</label>
+                <div class="form-group">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">₹</span>
+                    <input
+                      id="amount"
+                      type="text"
+                      class="form-control"
+                      aria-label="Amount (to the nearest rupee)"
+                    />
+                    <span class="input-group-text">.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="btnTransfer">
+                Transfer
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="text-center mt-4">Customers</h1>
+        <p class="text-muted text-center">
+          Send Money or View Transaction Histroy.
+        </p>
+        <div class="controls text-center">
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="btnSend"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+          >
+            Send Money
+          </button>
+
+          <a href="transactions.html" class="btn btn-secondary"
+            >View Transactions</a
+          >
+        </div>
+
+        <div class="text-center customers">
+          <img class="" src="loading.svg" alt="Loading.. please wait." />
+        </div>
+      </div>
+    </main>
+    <footer class="text-center p-4">ABC Bank. &copy; 2023.</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
