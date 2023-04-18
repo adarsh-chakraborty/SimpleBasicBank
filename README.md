@@ -16,7 +16,7 @@ Batch: April 2023
 
 ## Links
 - Deployment Link: https://abcbank.onrender.com/
-- Linkedin Post: 
+- Linkedin Post: https://www.linkedin.com/posts/adarsh-chakraborty_connections-task1-gripapril23-activity-7054127184965230592-j63a?utm_source=share&utm_medium=member_android
 
 ## Author
 
